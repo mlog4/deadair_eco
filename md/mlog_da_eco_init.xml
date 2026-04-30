@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+  mlog DeadAir Eco test build — initialization, build version, debug toggles.
+
+  Companion to deadair_scripts mlog_da_scripts_init.xml. Loaded alongside main
+  DeadAir Eco MD. Does NOT modify upstream state.
+  All vars in our own md.mlog_da_eco namespace.
+
+  Log prefix convention used by all mlog-added log lines:
+    'MLOG_DA_ECO v' + $build_version + ' [' + $subsystem + '/' + $level + '] ' + $msg
+
+  Subsystems used: INIT, SETUP, ECO, GENERAL
+  Levels:          DIAG (diagnostic — verifies hypothesis), INFO, WARN, ERROR
+
+  Filter logs via:
+    grep "MLOG_DA_ECO"               script.log
+    grep "MLOG_DA_ECO.*\[SETUP/"     script.log
+    grep -E "MLOG_DA(_ECO)? v"       script.log    # both eco + scripts
+-->
+<mdscript name="mlog_da_eco"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <cues>
+
+    <!--
+      Init cue — runs once on game start or load.
+      Sets up build identity + per-subsystem debug toggles.
+      Master switch: $debug_master = false → all mlog log lines silent.
+    -->
+    <cue name="MlogDaEcoInit" version="1">
+      <conditions>
+        <check_any>
+          <event_cue_signalled cue="md.Setup.GameStart"/>
+          <event_game_loaded/>
+        </check_any>
+      </conditions>
+      <actions>
+        <!-- Build identity — bump on every code change per build_workflow convention -->
+        <set_value name="$build_version"      exact="'1.13.1-mlog006'"/>
+        <set_value name="$build_date"         exact="'2026-04-28'"/>
+        <set_value name="$build_baseline"     exact="'DeadAirRT v1.13HF1 (2025-02-26)'"/>
+
+        <!-- Master kill switch — set to false to silence ALL mlog log output globally -->
+        <set_value name="$debug_master"       exact="true"/>
+
+        <!-- Per-subsystem debug toggles. true = output enabled (when master is on too) -->
+        <set_value name="$debug_init"         exact="true"/>   <!-- this Init cue itself -->
+        <set_value name="$debug_setup"        exact="true"/>   <!-- $DAEco companion flag readout -->
+        <set_value name="$debug_eco"          exact="true"/>   <!-- DA Wares existence probe -->
+
+        <!-- Banner — confirms our test build loaded -->
+        <do_if value="$debug_master and $debug_init">
+          <set_value name="$banner" exact="'MLOG_DA_ECO v' + $build_version + ' [INIT/INFO] LOADED — baseline ' + $build_baseline + ', date ' + $build_date"/>
+          <show_notification text="$banner"/>
+          <debug_text text="$banner" chance="100" filter="general"/>
+        </do_if>
+
+        <!-- $DAEco companion flag readout. setup_mod_daeco_v2.xml's Setup_Mod_DAEco_V2.Init writes md.$DAEco=true; this is the contract deadair_scripts uses to detect eco's presence. Race condition possible: our cue may fire before/after DA Eco's own init. Plain ?-chain (no @, per x4_md_exists_vs_nullsafe memory: @+? is parse error). -->
+        <do_if value="$debug_master and $debug_setup">
+          <do_if value="md.$DAEco?">
+            <debug_text text="'MLOG_DA_ECO v' + $build_version + ' [SETUP/INFO] md.$DAEco companion flag is set (value=' + md.$DAEco + ') — scripts can detect us'" chance="100" filter="general"/>
+          </do_if>
+          <do_else>
+            <debug_text text="'MLOG_DA_ECO v' + $build_version + ' [SETUP/DIAG] md.$DAEco not yet set at MlogDaEcoInit time (DA Eco own init may run later) — re-check via grep [SETUP/] later'" chance="100" filter="general"/>
+          </do_else>
+        </do_if>
+
+        <!-- DA Wares existence probe — mirrors deadair_scripts CR-1 probe from THIS side. Verifies the 3 wares (da_mil_schematics, da_adv_schematics, da_laborunion_contracts) are actually registered when DA Eco is loaded. If any of these is false, deadair_scripts will spew 'Property lookup failed' for each call to its Library_StationCalc_SetTable. Pattern: ware-name into intermediate var, then ware.{$var}? lookup (vanilla-proven, see crisis_manager.xml:134). -->
+        <do_if value="$debug_master and $debug_eco">
+          <set_value name="$wname_mil"    exact="'da_mil_schematics'"/>
+          <set_value name="$wname_adv"    exact="'da_adv_schematics'"/>
+          <set_value name="$wname_labor"  exact="'da_laborunion_contracts'"/>
+          <set_value name="$E_mil"    exact="ware.{$wname_mil}?"/>
+          <set_value name="$E_adv"    exact="ware.{$wname_adv}?"/>
+          <set_value name="$E_labor"  exact="ware.{$wname_labor}?"/>
+          <debug_text text="'MLOG_DA_ECO v' + $build_version + ' [ECO/DIAG] DA Wares registration: da_mil_schematics=' + $E_mil + ' da_adv_schematics=' + $E_adv + ' da_laborunion_contracts=' + $E_labor + ' (all should be 1; any 0 means deadair_scripts will get Property lookup failed)'" chance="100" filter="general"/>
+          <remove_value name="$wname_mil"/>
+          <remove_value name="$wname_adv"/>
+          <remove_value name="$wname_labor"/>
+          <remove_value name="$E_mil"/>
+          <remove_value name="$E_adv"/>
+          <remove_value name="$E_labor"/>
+        </do_if>
+      </actions>
+    </cue>
+
+  </cues>
+</mdscript>

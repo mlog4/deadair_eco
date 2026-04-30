@@ -3,48 +3,18 @@
   <replace sel="/jobs/job[@id='argon_bio_trader_l'][@name='{20204,1301}']/basket[@basket='bio']/@basket">bio_argon</replace>
   <replace sel="/jobs/job[@id='argon_bio_trader_m'][@name='{20204,1401}']/basket[@basket='bio']/@basket">bio_argon</replace>
   <replace sel="/jobs/job[@id='argon_food_trader_s'][@name='{20204,1801}']/basket[@basket='food']/@basket">foodrations</replace>
-  <replace sel="/jobs/job[@id='argon_equipment_trader_m'][@name='{20204,401}']/orders/order[@order='Middleman'][@default='true']/@order">TradeRoutine</replace>
-  <replace sel="/jobs/job[@id='argon_equipment_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']/param[@name='range'][@value='5']/@name">maxbuy</replace>
-  <add sel="/jobs/job[@id='argon_equipment_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']">
-    <param name="maxsell" value="5"/>
-  </add>
-  <replace sel="/jobs/job[@id='argon_tech_trader_m'][@name='{20204,401}']/orders/order[@order='Middleman'][@default='true']/@order">TradeRoutine</replace>
-  <replace sel="/jobs/job[@id='argon_tech_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']/param[@name='range'][@value='5']/@name">maxbuy</replace>
-  <add sel="/jobs/job[@id='argon_tech_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']">
-    <param name="maxsell" value="5"/>
-  </add>
   <replace sel="/jobs/job[@id='argon_stationtrader_m'][@name='{20204,801}']/quota[@galaxy='0'][@maxgalaxy='10']/@maxgalaxy">24</replace>
   <replace sel="/jobs/job[@id='argon_stationtrader_l'][@name='{20204,701}']/quota[@galaxy='0'][@maxgalaxy='3']/@maxgalaxy">12</replace>
   <replace sel="/jobs/job[@id='argon_construction_vessel_xl_playeronly'][@name='{20204,5101}']/orders/order[@order='FindBuildTasks'][@default='true']/param[@name='playeronly'][@value='true']/@value">false</replace>
   <replace sel="/jobs/job[@id='antigone_bio_trader_l'][@name='{20204,1301}']/basket[@basket='bio']/@basket">bio_argon</replace>
   <replace sel="/jobs/job[@id='antigone_bio_trader_m'][@name='{20204,1401}']/basket[@basket='bio']/@basket">bio_argon</replace>
   <replace sel="/jobs/job[@id='antigone_food_trader_s'][@name='{20204,1801}']/basket[@basket='food']/@basket">foodrations</replace>
-  <replace sel="/jobs/job[@id='antigone_equipment_trader_m'][@name='{20204,401}']/orders/order[@order='Middleman'][@default='true']/@order">TradeRoutine</replace>
-  <replace sel="/jobs/job[@id='antigone_equipment_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']/param[@name='range'][@value='5']/@name">maxbuy</replace>
-  <add sel="/jobs/job[@id='antigone_equipment_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']">
-    <param name="maxsell" value="5"/>
-  </add>
-  <replace sel="/jobs/job[@id='antigone_tech_trader_m'][@name='{20204,401}']/orders/order[@order='Middleman'][@default='true']/@order">TradeRoutine</replace>
-  <replace sel="/jobs/job[@id='antigone_tech_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']/param[@name='range'][@value='5']/@name">maxbuy</replace>
-  <add sel="/jobs/job[@id='antigone_tech_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']">
-    <param name="maxsell" value="5"/>
-  </add>
   <replace sel="/jobs/job[@id='antigone_stationtrader_m'][@name='{20204,801}']/quota[@galaxy='0'][@maxgalaxy='10']/@maxgalaxy">24</replace>
   <replace sel="/jobs/job[@id='antigone_stationtrader_l'][@name='{20204,701}']/quota[@galaxy='0'][@maxgalaxy='3']/@maxgalaxy">12</replace>
   <replace sel="/jobs/job[@id='antigone_construction_vessel_xl_playeronly'][@name='{20204,5101}']/orders/order[@order='FindBuildTasks'][@default='true']/param[@name='playeronly'][@value='true']/@value">false</replace>
   <replace sel="/jobs/job[@id='paranid_bio_trader_l'][@name='{20204,1301}']/basket[@basket='bio']/@basket">bio_paranid</replace>
   <replace sel="/jobs/job[@id='paranid_bio_trader_m'][@name='{20204,1401}']/basket[@basket='bio']/@basket">bio_paranid</replace>
   <replace sel="/jobs/job[@id='paranid_food_trader_s'][@name='{20204,1801}']/basket[@basket='food']/@basket">sojahusk</replace>
-  <replace sel="/jobs/job[@id='paranid_equipment_trader_m'][@name='{20204,401}']/orders/order[@order='Middleman'][@default='true']/@order">TradeRoutine</replace>
-  <replace sel="/jobs/job[@id='paranid_equipment_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']/param[@name='range'][@value='5']/@name">maxbuy</replace>
-  <add sel="/jobs/job[@id='paranid_equipment_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']">
-    <param name="maxsell" value="5"/>
-  </add>
-  <replace sel="/jobs/job[@id='paranid_tech_trader_m'][@name='{20204,401}']/orders/order[@order='Middleman'][@default='true']/@order">TradeRoutine</replace>
-  <replace sel="/jobs/job[@id='paranid_tech_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']/param[@name='range'][@value='5']/@name">maxbuy</replace>
-  <add sel="/jobs/job[@id='paranid_tech_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']">
-    <param name="maxsell" value="5"/>
-  </add>
   <replace sel="/jobs/job[@id='paranid_stationtrader_m'][@name='{20204,801}']/quota[@galaxy='5'][@maxgalaxy='10']/@galaxy">0</replace>
   <replace sel="/jobs/job[@id='paranid_stationtrader_m'][@name='{20204,801}']/quota[@galaxy='0'][@maxgalaxy='10']/@maxgalaxy">24</replace>
   <replace sel="/jobs/job[@id='paranid_stationtrader_l'][@name='{20204,701}']/quota[@galaxy='5'][@maxgalaxy='3']/@galaxy">0</replace>
@@ -53,58 +23,23 @@
   <replace sel="/jobs/job[@id='holyorder_bio_trader_l'][@name='{20204,1301}']/basket[@basket='bio']/@basket">bio_paranid</replace>
   <replace sel="/jobs/job[@id='holyorder_bio_trader_m'][@name='{20204,1401}']/basket[@basket='bio']/@basket">bio_paranid</replace>
   <replace sel="/jobs/job[@id='holyorder_food_trader_s'][@name='{20204,1801}']/basket[@basket='food']/@basket">sojahusk</replace>
-  <replace sel="/jobs/job[@id='holyorder_equipment_trader_m'][@name='{20204,401}']/orders/order[@order='Middleman'][@default='true']/@order">TradeRoutine</replace>
-  <replace sel="/jobs/job[@id='holyorder_equipment_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']/param[@name='range'][@value='5']/@name">maxbuy</replace>
-  <add sel="/jobs/job[@id='holyorder_equipment_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']">
-    <param name="maxsell" value="5"/>
-  </add>
-  <replace sel="/jobs/job[@id='holyorder_tech_trader_m'][@name='{20204,401}']/orders/order[@order='Middleman'][@default='true']/@order">TradeRoutine</replace>
-  <replace sel="/jobs/job[@id='holyorder_tech_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']/param[@name='range'][@value='5']/@name">maxbuy</replace>
-  <add sel="/jobs/job[@id='holyorder_tech_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']">
-    <param name="maxsell" value="5"/>
-  </add>
   <replace sel="/jobs/job[@id='holyorder_stationtrader_m'][@name='{20204,801}']/quota[@galaxy='0'][@maxgalaxy='10']/@maxgalaxy">24</replace>
   <replace sel="/jobs/job[@id='holyorder_stationtrader_l'][@name='{20204,701}']/quota[@galaxy='0'][@maxgalaxy='3']/@maxgalaxy">12</replace>
   <replace sel="/jobs/job[@id='holyorder_construction_vessel_xl_playeronly'][@name='{20204,5101}']/orders/order[@order='FindBuildTasks'][@default='true']/param[@name='playeronly'][@value='true']/@value">false</replace>
   <replace sel="/jobs/job[@id='trinity_bio_trader_l'][@name='{20204,1301}']/basket[@basket='bio']/@basket">bio_paranid</replace>
   <replace sel="/jobs/job[@id='trinity_bio_trader_m'][@name='{20204,1401}']/basket[@basket='bio']/@basket">bio_paranid</replace>
   <replace sel="/jobs/job[@id='trinity_food_trader_s'][@name='{20204,1801}']/basket[@basket='food']/@basket">sojahusk</replace>
-  <replace sel="/jobs/job[@id='trinity_equipment_trader_m'][@name='{20204,401}']/orders/order[@order='Middleman'][@default='true']/@order">TradeRoutine</replace>
-  <replace sel="/jobs/job[@id='trinity_equipment_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']/param[@name='range'][@value='5']/@name">maxbuy</replace>
-  <add sel="/jobs/job[@id='trinity_equipment_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']">
-    <param name="maxsell" value="5"/>
-  </add>
-  <replace sel="/jobs/job[@id='trinity_tech_trader_m'][@name='{20204,401}']/orders/order[@order='Middleman'][@default='true']/@order">TradeRoutine</replace>
-  <replace sel="/jobs/job[@id='trinity_tech_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']/param[@name='range'][@value='5']/@name">maxbuy</replace>
-  <add sel="/jobs/job[@id='trinity_tech_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']">
-    <param name="maxsell" value="5"/>
-  </add>
   <replace sel="/jobs/job[@id='trinity_stationtrader_m'][@name='{20204,801}']/quota[@galaxy='0'][@maxgalaxy='16']/@maxgalaxy">24</replace>
   <replace sel="/jobs/job[@id='trinity_stationtrader_l'][@name='{20204,701}']/quota[@galaxy='0'][@maxgalaxy='5']/@maxgalaxy">12</replace>
   <replace sel="/jobs/job[@id='trinity_construction_vessel_xl_playeronly'][@name='{20204,5101}']/orders/order[@order='FindBuildTasks'][@default='true']/param[@name='playeronly'][@value='true']/@value">false</replace>
   <replace sel="/jobs/job[@id='teladi_bio_trader_l'][@name='{20204,1301}']/basket[@basket='bio']/@basket">bio_teladi</replace>
   <replace sel="/jobs/job[@id='teladi_bio_trader_m'][@name='{20204,1401}']/basket[@basket='bio']/@basket">bio_teladi</replace>
   <replace sel="/jobs/job[@id='teladi_food_trader_s'][@name='{20204,1801}']/basket[@basket='food']/@basket">nostropoil</replace>
-  <replace sel="/jobs/job[@id='teladi_equipment_trader_m'][@name='{20204,401}']/orders/order[@order='Middleman'][@default='true']/@order">TradeRoutine</replace>
-  <replace sel="/jobs/job[@id='teladi_equipment_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']/param[@name='range'][@value='5']/@name">maxbuy</replace>
-  <add sel="/jobs/job[@id='teladi_equipment_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']">
-    <param name="maxsell" value="5"/>
-  </add>
   <replace sel="/jobs/job[@id='teladi_refinedmineral_trader_l'][@name='{20204,501}']/basket[@basket='refined_mineral']/@basket">da_refined_mineral_teladi</replace>
   <replace sel="/jobs/job[@id='teladi_refinedmineral_trader_m'][@name='{20204,601}']/basket[@basket='refined_mineral']/@basket">da_refined_mineral_teladi</replace>
-  <replace sel="/jobs/job[@id='teladi_tech_trader_m'][@name='{20204,401}']/orders/order[@order='Middleman'][@default='true']/@order">TradeRoutine</replace>
-  <replace sel="/jobs/job[@id='teladi_tech_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']/param[@name='range'][@value='5']/@name">maxbuy</replace>
-  <add sel="/jobs/job[@id='teladi_tech_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']">
-    <param name="maxsell" value="5"/>
-  </add>
   <replace sel="/jobs/job[@id='teladi_stationtrader_m'][@name='{20204,801}']/quota[@galaxy='0'][@maxgalaxy='15']/@maxgalaxy">24</replace>
   <replace sel="/jobs/job[@id='teladi_stationtrader_l'][@name='{20204,701}']/quota[@galaxy='0'][@maxgalaxy='5']/@maxgalaxy">12</replace>
   <replace sel="/jobs/job[@id='teladi_construction_vessel_xl_playeronly'][@name='{20204,5101}']/orders/order[@order='FindBuildTasks'][@default='true']/param[@name='playeronly'][@value='true']/@value">false</replace>
-  <replace sel="/jobs/job[@id='ministry_tech_trader_m'][@name='{20204,401}']/orders/order[@order='Middleman'][@default='true']/@order">TradeRoutine</replace>
-  <replace sel="/jobs/job[@id='ministry_tech_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']/param[@name='range'][@value='5']/@name">maxbuy</replace>
-  <add sel="/jobs/job[@id='ministry_tech_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']">
-    <param name="maxsell" value="5"/>
-  </add>
   <replace sel="/jobs/job[@id='ministry_food_trader_s'][@name='{20204,1801}']/basket[@basket='food']/@basket">nostropoil</replace>
   <replace sel="/jobs/job[@id='ministry_construction_vessel_xl_playeronly'][@name='{20204,5101}']/orders/order[@order='FindBuildTasks'][@default='true']/param[@name='playeronly'][@value='true']/@value">false</replace>
   <replace sel="/jobs/job[@id='ministry_stationtrader_m'][@name='{20204,801}']/quota[@galaxy='0'][@maxgalaxy='10']/@maxgalaxy">24</replace>
@@ -113,64 +48,24 @@
   <replace sel="/jobs/job[@id='zyarth_food_trader_l'][@name='{20204,1301}']/basket[@basket='food']/@basket">da_bio_split</replace>
   <replace sel="/jobs/job[@id='zyarth_food_trader_m'][@name='{20204,1401}']/basket[@basket='food']/@basket">da_bio_split</replace>
   <replace sel="/jobs/job[@id='zyarth_food_trader_s'][@name='{20204,1801}']/basket[@basket='food']/@basket">da_food_split</replace>
-  <replace sel="/jobs/job[@id='zyarth_equipment_trader_m'][@name='{20204,401}']/orders/order[@order='Middleman'][@default='true']/@order">TradeRoutine</replace>
-  <replace sel="/jobs/job[@id='zyarth_equipment_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']/param[@name='range'][@value='5']/@name">maxbuy</replace>
-  <add sel="/jobs/job[@id='zyarth_equipment_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']">
-    <param name="maxsell" value="5"/>
-  </add>
-  <replace sel="/jobs/job[@id='zyarth_tech_trader_m'][@name='{20204,401}']/orders/order[@order='Middleman'][@default='true']/@order">TradeRoutine</replace>
-  <replace sel="/jobs/job[@id='zyarth_tech_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']/param[@name='range'][@value='5']/@name">maxbuy</replace>
-  <add sel="/jobs/job[@id='zyarth_tech_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']">
-    <param name="maxsell" value="5"/>
-  </add>
   <replace sel="/jobs/job[@id='zyarth_stationtrader_m'][@name='{20204,801}']/quota[@galaxy='0'][@maxgalaxy='10']/@maxgalaxy">24</replace>
   <replace sel="/jobs/job[@id='zyarth_stationtrader_l'][@name='{20204,701}']/quota[@galaxy='0'][@maxgalaxy='3']/@maxgalaxy">12</replace>
   <replace sel="/jobs/job[@id='zyarth_construction_vessel_xl_playeronly'][@name='{20204,5101}']/orders/order[@order='FindBuildTasks'][@default='true']/param[@name='playeronly'][@value='true']/@value">false</replace>
   <replace sel="/jobs/job[@id='freesplit_food_trader_l'][@name='{20204,1301}']/basket[@basket='food']/@basket">da_bio_split</replace>
   <replace sel="/jobs/job[@id='freesplit_food_trader_m'][@name='{20204,1401}']/basket[@basket='food']/@basket">da_bio_split</replace>
   <replace sel="/jobs/job[@id='freesplit_food_trader_s'][@name='{20204,1801}']/basket[@basket='food']/@basket">da_food_split</replace>
-  <replace sel="/jobs/job[@id='freesplit_equipment_trader_m'][@name='{20204,401}']/orders/order[@order='Middleman'][@default='true']/@order">TradeRoutine</replace>
-  <replace sel="/jobs/job[@id='freesplit_equipment_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']/param[@name='range'][@value='5']/@name">maxbuy</replace>
-  <add sel="/jobs/job[@id='freesplit_equipment_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']">
-    <param name="maxsell" value="5"/>
-  </add>
-  <replace sel="/jobs/job[@id='freesplit_tech_trader_m'][@name='{20204,401}']/orders/order[@order='Middleman'][@default='true']/@order">TradeRoutine</replace>
-  <replace sel="/jobs/job[@id='freesplit_tech_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']/param[@name='range'][@value='5']/@name">maxbuy</replace>
-  <add sel="/jobs/job[@id='freesplit_tech_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']">
-    <param name="maxsell" value="5"/>
-  </add>
   <replace sel="/jobs/job[@id='freesplit_stationtrader_m'][@name='{20204,801}']/quota[@galaxy='0'][@maxgalaxy='10']/@maxgalaxy">24</replace>
   <replace sel="/jobs/job[@id='freesplit_stationtrader_l'][@name='{20204,701}']/quota[@galaxy='0'][@maxgalaxy='3']/@maxgalaxy">12</replace>
   <replace sel="/jobs/job[@id='freesplit_construction_vessel_xl_playeronly'][@name='{20204,5101}']/orders/order[@order='FindBuildTasks'][@default='true']/param[@name='playeronly'][@value='true']/@value">false</replace>
   <replace sel="/jobs/job[@id='terran_food_trader_l'][@name='{20204,1301}']/basket[@basket='food_terran']/@basket">bio_terran</replace>
   <replace sel="/jobs/job[@id='terran_food_trader_m'][@name='{20204,1401}']/basket[@basket='food_terran']/@basket">bio_terran</replace>
   <replace sel="/jobs/job[@id='terran_food_trader_s'][@name='{20204,1801}']/basket[@basket='food_terran']/@basket">terranmre</replace>
-  <replace sel="/jobs/job[@id='terran_equipment_trader_m'][@name='{20204,401}']/orders/order[@order='Middleman'][@default='true']/@order">TradeRoutine</replace>
-  <replace sel="/jobs/job[@id='terran_equipment_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']/param[@name='range'][@value='5']/@name">maxbuy</replace>
-  <add sel="/jobs/job[@id='terran_equipment_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']">
-    <param name="maxsell" value="5"/>
-  </add>
-  <replace sel="/jobs/job[@id='terran_tech_trader_m'][@name='{20204,401}']/orders/order[@order='Middleman'][@default='true']/@order">TradeRoutine</replace>
-  <replace sel="/jobs/job[@id='terran_tech_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']/param[@name='range'][@value='5']/@name">maxbuy</replace>
-  <add sel="/jobs/job[@id='terran_tech_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']">
-    <param name="maxsell" value="5"/>
-  </add>
   <replace sel="/jobs/job[@id='terran_stationtrader_m'][@name='{20204,801}']/quota[@galaxy='0'][@maxgalaxy='10']/@maxgalaxy">24</replace>
   <replace sel="/jobs/job[@id='terran_stationtrader_l'][@name='{20204,701}']/quota[@galaxy='0'][@maxgalaxy='3']/@maxgalaxy">12</replace>
   <replace sel="/jobs/job[@id='terran_construction_vessel_xl_playeronly'][@name='{20204,5101}']/orders/order[@order='FindBuildTasks'][@default='true']/param[@name='playeronly'][@value='true']/@value">false</replace>
   <replace sel="/jobs/job[@id='pioneers_food_trader_l'][@name='{20204,1301}']/basket[@basket='food']/@basket">bio_terran</replace>
   <replace sel="/jobs/job[@id='pioneers_food_trader_m'][@name='{20204,1401}']/basket[@basket='food']/@basket">bio_terran</replace>
   <replace sel="/jobs/job[@id='pioneers_food_trader_s'][@name='{20204,1801}']/basket[@basket='food']/@basket">terranmre</replace>
-  <replace sel="/jobs/job[@id='pioneers_equipment_trader_m'][@name='{20204,401}']/orders/order[@order='Middleman'][@default='true']/@order">TradeRoutine</replace>
-  <replace sel="/jobs/job[@id='pioneers_equipment_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']/param[@name='range'][@value='5']/@name">maxbuy</replace>
-  <add sel="/jobs/job[@id='pioneers_equipment_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']">
-    <param name="maxsell" value="5"/>
-  </add>
-  <replace sel="/jobs/job[@id='pioneers_tech_trader_m'][@name='{20204,401}']/orders/order[@order='Middleman'][@default='true']/@order">TradeRoutine</replace>
-  <replace sel="/jobs/job[@id='pioneers_tech_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']/param[@name='range'][@value='5']/@name">maxbuy</replace>
-  <add sel="/jobs/job[@id='pioneers_tech_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']">
-    <param name="maxsell" value="5"/>
-  </add>
   <replace sel="/jobs/job[@id='pioneers_stationtrader_m'][@name='{20204,801}']/quota[@galaxy='0'][@maxgalaxy='10']/@maxgalaxy">24</replace>
   <replace sel="/jobs/job[@id='pioneers_stationtrader_l'][@name='{20204,701}']/quota[@galaxy='0'][@maxgalaxy='3']/@maxgalaxy">12</replace>
   <replace sel="/jobs/job[@id='pioneers_construction_vessel_xl_playeronly'][@name='{20204,5101}']/orders/order[@order='FindBuildTasks'][@default='true']/param[@name='playeronly'][@value='true']/@value">false</replace>
@@ -180,16 +75,6 @@
   <replace sel="/jobs/job[@id='boron_bio_trader_m_fake'][@name='{20204,1401}']/basket[@basket='bio']/@basket">da_bio_boron</replace>
   <replace sel="/jobs/job[@id='boron_food_trader_s'][@name='{20204,1801}']/basket[@basket='food']/@basket">bofu</replace>
   <replace sel="/jobs/job[@id='boron_food_trader_s_initial'][@name='{20204,1801}']/basket[@basket='food']/@basket">bofu</replace>
-  <replace sel="/jobs/job[@id='boron_equipment_trader_m'][@name='{20204,401}']/orders/order[@order='Middleman'][@default='true']/@order">TradeRoutine</replace>
-  <replace sel="/jobs/job[@id='boron_equipment_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']/param[@name='range'][@value='5']/@name">maxbuy</replace>
-  <add sel="/jobs/job[@id='boron_equipment_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']">
-    <param name="maxsell" value="5"/>
-  </add>
-  <replace sel="/jobs/job[@id='boron_tech_trader_m'][@name='{20204,401}']/orders/order[@order='Middleman'][@default='true']/@order">TradeRoutine</replace>
-  <replace sel="/jobs/job[@id='boron_tech_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']/param[@name='range'][@value='5']/@name">maxbuy</replace>
-  <add sel="/jobs/job[@id='boron_tech_trader_m'][@name='{20204,401}']/orders/order[@order='TradeRoutine'][@default='true']">
-    <param name="maxsell" value="5"/>
-  </add>
   <replace sel="/jobs/job[@id='boron_stationtrader_m'][@name='{20204,801}']/quota[@galaxy='0'][@maxgalaxy='10']/@maxgalaxy">24</replace>
   <replace sel="/jobs/job[@id='boron_stationtrader_l'][@name='{20204,701}']/quota[@galaxy='0'][@maxgalaxy='3']/@maxgalaxy">12</replace>
   <replace sel="/jobs/job[@id='boron_construction_vessel_xl_playeronly'][@name='{20204,5101}']/orders/order[@order='FindBuildTasks'][@default='true']/param[@name='playeronly'][@value='true']/@value">false</replace>

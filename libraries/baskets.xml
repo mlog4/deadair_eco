@@ -83,9 +83,9 @@
     <ware ware="scanningarrays"/>
   </add>
   <remove sel="/baskets/basket[@id='minerals'][@name='Mineral Wares']/wares/ware[@ware='ice']"/>
-  <remove sel="/baskets/basket[@id='refined'][@name='Refined Wares']/wares/ware[@ware='energycells']"/>
+  <!-- mlog004→mlog005: removed `refined` and `surface` energycells removes — vanilla 8.x already
+       removed energycells from both baskets, DA-Eco's intent has converged with vanilla. -->
   <remove sel="/baskets/basket[@id='refined_mineral'][@name='Refined Mineral Wares']/wares/ware[@ware='teladianium']"/>
-  <remove sel="/baskets/basket[@id='surface'][@name='Surface Wares']/wares/ware[@ware='energycells']"/>
   <remove sel="/baskets/basket[@id='tech'][@name='Tech Wares']/wares/ware[@ware='advancedcomposites']"/>
   <remove sel="/baskets/basket[@id='tech'][@name='Tech Wares']/wares/ware[@ware='engineparts']"/>
   <remove sel="/baskets/basket[@id='tech'][@name='Tech Wares']/wares/ware[@ware='hullparts']"/>

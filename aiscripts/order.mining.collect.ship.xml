@@ -1,4 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <diff>
-  <replace sel="/aiscript/attention[@min='unknown']/actions/do_while[@value='this.ship.cargo.{$ware}.free gt 0']/set_value[@exact='1.0f'][@name='$efficiency']/@exact">0.9f</replace>
+  <!-- mlog004→mlog005: vanilla 8.x wrapped the do_while inside a new do_else (sibling of a
+       miningrig branch added at line 299); XPath now needs the extra /do_else/ step. -->
+  <replace sel="/aiscript/attention[@min='unknown']/actions/do_else/do_while[@value='this.ship.cargo.{$ware}.free gt 0']/set_value[@exact='1.0f'][@name='$efficiency']/@exact">0.9f</replace>
 </diff>

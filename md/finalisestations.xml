@@ -20,13 +20,16 @@
     </do_if>
   </replace>
   <replace sel="/mdscript/cues/cue[@name='God_DefaultFinaliseFactory']/cues/cue[@name='ConstructionSequenceCompleted']/actions/do_if[@value='$ConstructionSequence']/set_build_plot[@object='$Station']/@allowreduction">false</replace>
-  <add sel="/mdscript/cues/library[@name='NewStation_GenerateFactory']/actions/do_if[@value='$Station.owner != faction.xenon']">
+  <!-- mlog005→mlog006: vanilla 8.x added an early-exit `do_if[@$Station.plannedconstruction.sequence.hasstages]`
+       and wrapped the entire main body in a new `do_else`. All 3 NewStation_GenerateFactory patches
+       need the extra `/do_else/` step inserted right after `actions`. -->
+  <add sel="/mdscript/cues/library[@name='NewStation_GenerateFactory']/actions/do_else/do_if[@value='$Station.owner != faction.xenon']">
     <include_actions ref="md.FinaliseStations.DAIncreaseStartingStorage"/>
   </add>
-  <add sel="/mdscript/cues/library[@name='NewStation_GenerateFactory']/actions/set_value[@name='$dbg_str']" pos="before">
+  <add sel="/mdscript/cues/library[@name='NewStation_GenerateFactory']/actions/do_else/set_value[@name='$dbg_str']" pos="before">
     <include_actions ref="md.FinaliseStations.DAImproveStationLayouts"/>
   </add>
-  <replace sel="/mdscript/cues/library[@name='NewStation_GenerateFactory']/actions/do_if[@value='$Conn_PlannedConnectors.count']/create_construction_sequence[@station='$Station'][@macros='$NewPlannedModules']">
+  <replace sel="/mdscript/cues/library[@name='NewStation_GenerateFactory']/actions/do_else/do_if[@value='$Conn_PlannedConnectors.count']/create_construction_sequence[@station='$Station'][@macros='$NewPlannedModules']">
     <do_if value="true">
       <do_if value="$Station.owner.primaryrace != race.xenon">
         <create_construction_sequence station="$Station" macros="$NewPlannedModules" connectors="$Conn_PlannedConnectors" base="$BaseSequence" constructionbias="10.0"/>
